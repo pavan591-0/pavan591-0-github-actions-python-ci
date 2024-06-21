@@ -1,13 +1,15 @@
 name: Python application
+
 on: [push, pull_request]
+
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v3
     - name: Set up Python 3.8
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5 # Updated to use Node.js 20
       with:
         python-version: 3.8
     - name: Install dependencies
